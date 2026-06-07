@@ -1,5 +1,6 @@
 import Eyebrow from '@/shared/components/Eyebrow'
 import Tape from '@/shared/components/Tape'
+import HandNote from '@/shared/components/HandNote'
 import { NOW_ITEMS, getStatusPrefix } from './now.data'
 
 export default function Now() {
@@ -13,11 +14,12 @@ export default function Now() {
       <div className="grid grid-cols-1 gap-12 xl:grid-cols-[1.4fr_1fr] xl:gap-12 items-start">
         {/* Left — headline */}
         <h2 className="font-display font-extrabold text-cream uppercase m-0 leading-[0.95] tracking-[-0.03em] text-[48px] lg:text-[66px] xl:text-[88px]">
-          BUILDING{' '}
-          <span className="text-hot">DEBATEME</span>.
+          <span className="text-hot">OFF-HOURS</span>
+          <br />
+          LAB.
           <br />
           <span className="text-muted text-[32px] lg:text-[44px] xl:text-[56px]">
-            SHIPPING WEEKLY.
+            QUIET MODE.
           </span>
         </h2>
 
@@ -29,7 +31,7 @@ export default function Now() {
           <Tape width={100} top={-12} left="20%" rotate={-5} color="#7df9c9" />
 
           <p className="font-mono text-[11px] text-ink-dim tracking-[0.18em] mb-3.5">
-            THIS WEEK
+            CURRENTLY TINKERING
           </p>
 
           <ul className="list-none p-0 m-0 font-sans text-[16px] leading-[1.7] font-medium">
@@ -44,6 +46,10 @@ export default function Now() {
               </li>
             ))}
           </ul>
+
+          <HandNote rotate={-2} color="#ff5a3c" fontSize={22} style={{ marginTop: 24, display: 'block' }}>
+            also: open for one founder-led build this quarter
+          </HandNote>
         </div>
       </div>
     </section>

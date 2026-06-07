@@ -10,4 +10,5 @@ export type FeaturedProject = {
   tapeColor: string
   cardRotation: number
   tapeRotation: number
+  liveUrl?: string
 }

@@ -6,10 +6,10 @@ export type NowItem = {
 }
 
 export const NOW_ITEMS: NowItem[] = [
-  { text: 'Room moderation rules', status: 'done' },
-  { text: 'Vote weights v2', status: 'done' },
-  { text: 'Spectator UI (in progress)', status: 'in-progress' },
-  { text: 'Notifications batching', status: 'todo' },
+  { text: 'my own thing (founder’s-own-product mode)', status: 'done' },
+  { text: 'weekend experiments', status: 'done' },
+  { text: 'quiet open-source', status: 'in-progress' },
+  { text: 'writing it down', status: 'todo' },
 ]
 
 const STATUS_PREFIX: Record<NowItemStatus, string> = {

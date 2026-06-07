@@ -23,7 +23,20 @@ export default function FeaturedProjectCard({ project }: FeaturedProjectCardProp
 
       {/* Meta */}
       <p className="font-mono text-[11px] text-ink-dim tracking-[0.18em] mb-3">
-        {project.company.toUpperCase()} · {project.year}
+        {project.company.toUpperCase()} · {project.year} ·{' '}
+        {project.liveUrl ? (
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-ink hover:text-hot transition-colors"
+            style={{ borderBottom: '1px solid currentColor' }}
+          >
+            LIVE →
+          </a>
+        ) : (
+          <span className="text-ink">IN STEALTH</span>
+        )}
       </p>
 
       {/* Name */}

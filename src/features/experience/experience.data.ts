@@ -19,20 +19,20 @@ export const EXPERIENCE: ExperienceItem[] = [
     role: 'Lead FE / Mobile / Fullstack',
     span: '2024 — Now (PT)',
     dotColor: '#ffd84a',
-    note: 'Pur ran Core. He stepped back, started PMM, called me first. Still here.',
+    note: 'Brought in as Lead Frontend because I already knew the products inside-out. Still here.',
   },
   {
     company: 'Pinetop',
     role: 'Product Engineer',
     span: '2025 — 2026',
     dotColor: '#7df9c9',
-    note: 'Michael sent me to meet clients alone. Requirements → PRD → shipped.',
+    note: 'Owned client requirements end-to-end. Met clients, wrote the BRD, shipped the product.',
   },
   {
     company: 'Debateme',
     role: 'Founding Engineer',
     span: '2026 — Now',
     dotColor: '#ff5a3c',
-    note: 'Scott had the vision. I am the tech department.',
+    note: 'Founding tech department. Every layer, founder-direct.',
   },
 ]

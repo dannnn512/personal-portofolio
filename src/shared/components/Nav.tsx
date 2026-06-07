@@ -37,7 +37,7 @@ export default function Nav() {
             to="/hire"
             className="bg-electric text-ink px-3 py-1.5 font-bold hover:bg-[#a0fbd4] transition-colors"
           >
-            HIRE → OPEN
+            WORK WITH ME
           </Link>
         </nav>
 
@@ -77,7 +77,7 @@ export default function Nav() {
             className="bg-electric text-ink px-3 py-1.5 font-bold text-center hover:bg-[#a0fbd4] transition-colors"
             onClick={() => setOpen(false)}
           >
-            HIRE → OPEN
+            WORK WITH ME
           </Link>
         </nav>
       )}
