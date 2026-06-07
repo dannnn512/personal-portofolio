@@ -1,0 +1,14 @@
+/* Design tokens as CSS custom properties — mirrors tailwind.config.ts */
+:root {
+  --color-bg: #111111;
+  --color-bg-alt: #1a1a1a;
+  --color-paper: #ede5d3;
+  --color-paper-dark: #2a2620;
+  --color-ink: #1a1614;
+  --color-ink-dim: #5a504a;
+  --color-cream: #f5f1e8;
+  --color-muted: #9a948a;
+  --color-hot: #ff5a3c;
+  --color-electric: #7df9c9;
+  --color-yellow: #ffd84a;
+}
