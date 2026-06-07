@@ -26,7 +26,7 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
     name: 'MPOS ECOSYSTEM',
     company: 'PMM',
     role: 'Mobile + Fullstack',
-    year: '2022 — Now',
+    year: '2022 — 2024 · 2026 — Now',
     body: 'Cashier web, dashboard, legacy refactor, plus a mobile loyalty point app. Mobile, FE, BE, and product calls — the whole stack.',
     stack: 'Mobile · FE · BE · product',
     tapeColor: '#7df9c9',
