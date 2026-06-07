@@ -49,8 +49,12 @@ export default function Hire() {
 
       {/* CTA row */}
       <div className="mt-14 flex gap-3 items-center flex-wrap max-sm:mt-10">
-        <Button variant="primary-hot" size="lg" href="mailto:arya.ziddan7@gmail.com">
-          BOOK A CALL →
+        <Button
+          variant="primary-hot"
+          size="lg"
+          href="https://wa.me/6285817000448?text=Hi%20Ziddan!%20I%20have%20something%20to%20build."
+        >
+          MESSAGE ON WHATSAPP →
         </Button>
         <Button variant="secondary" size="lg" href="/cv.pdf">
           DOWNLOAD CV ↓

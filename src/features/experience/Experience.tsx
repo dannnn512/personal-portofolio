@@ -42,6 +42,11 @@ export default function Experience() {
               <p className="font-display font-extrabold text-cream text-[22px] tracking-[-0.01em] mt-1.5 mb-0">
                 {item.company}
               </p>
+              {item.fullName && (
+                <p className="font-mono text-[10px] text-muted tracking-[0.1em] mt-0.5 mb-0 uppercase">
+                  {item.fullName}
+                </p>
+              )}
               <p className="font-sans text-[14px] text-muted mt-1 mb-0">
                 {item.role}
               </p>
@@ -74,6 +79,11 @@ export default function Experience() {
               <p className="font-display font-extrabold text-cream text-[20px] tracking-[-0.01em] mt-1 mb-0">
                 {item.company}
               </p>
+              {item.fullName && (
+                <p className="font-mono text-[10px] text-muted tracking-[0.1em] mt-0.5 mb-0 uppercase">
+                  {item.fullName}
+                </p>
+              )}
               <p className="font-sans text-[14px] text-muted mt-0.5 mb-0">
                 {item.role}
               </p>
