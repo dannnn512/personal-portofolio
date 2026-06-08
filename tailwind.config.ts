@@ -22,6 +22,7 @@ const config: Config = {
         hand: ['var(--font-hand)', 'cursive'],
         mono: ['var(--font-mono)', 'monospace'],
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        editorial: ['var(--font-editorial)', 'serif'],
       },
       fontSize: {
         'stat': ['88px', { lineHeight: '1', letterSpacing: '-0.04em' }],

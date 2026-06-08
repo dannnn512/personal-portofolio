@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Eyebrow from '@/shared/components/Eyebrow'
 import Tape from '@/shared/components/Tape'
 import HandNote from '@/shared/components/HandNote'
@@ -13,15 +14,29 @@ export default function Now() {
 
       <div className="grid grid-cols-1 gap-12 xl:grid-cols-[1.4fr_1fr] xl:gap-12 items-start">
         {/* Left — headline */}
-        <h2 className="font-display font-extrabold text-cream uppercase m-0 leading-[0.95] tracking-[-0.03em] text-[48px] lg:text-[66px] xl:text-[88px]">
-          <span className="text-hot">OFF-HOURS</span>
-          <br />
-          LAB.
-          <br />
-          <span className="text-muted text-[32px] lg:text-[44px] xl:text-[56px]">
-            QUIET MODE.
-          </span>
-        </h2>
+        <div>
+          <h2 className="font-display font-extrabold text-cream uppercase m-0 leading-[0.95] tracking-[-0.03em] text-[48px] lg:text-[66px] xl:text-[88px]">
+            <span className="text-hot">OFF-HOURS</span>
+            <br />
+            LAB.
+            <br />
+            <span className="text-muted text-[32px] lg:text-[44px] xl:text-[56px]">
+              QUIET MODE.
+            </span>
+          </h2>
+
+          <Link
+            to="/offlane"
+            className="group mt-6 inline-flex items-baseline gap-3 font-editorial italic text-cream text-[28px] lg:text-[34px] leading-none tracking-[-0.005em] transition-colors hover:text-hot"
+          >
+            <span className="border-b border-cream/30 group-hover:border-hot/60 transition-colors pb-1">
+              step into the lab
+            </span>
+            <span className="not-italic font-sans text-[20px] lg:text-[24px] transition-transform group-hover:translate-x-1">
+              →
+            </span>
+          </Link>
+        </div>
 
         {/* Right — paper card */}
         <div
