@@ -9,10 +9,9 @@ export default function Manifesto() {
           Side products, experiments, writing. Built after hours, separate from the
           day job.{' '}
           <span className="dim">
-            None of it is for hire. Most of it isn&rsquo;t done. Some of it never
-            will be.
+            Most of it isn&rsquo;t done. Some of it never will be.
           </span>{' '}
-          This is where it lives anyway.
+          If something fits, it can be yours. This is where it lives anyway.
         </p>
         <div className="manifesto-aside">
           <span className="k">// off the record</span>
