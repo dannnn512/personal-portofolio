@@ -1,7 +1,7 @@
 const STATS = [
   { value: '4', label: 'YEARS SHIPPING' },
   { value: '15+', label: 'PRODUCTS LIVE' },
-  { value: '3', label: 'CEOs HANDED ME THE KEYS' },
+  { value: 'EVERY', label: 'ROLE GREW BEYOND BRIEF' },
   { value: '8+', label: 'BUILT SOLO' },
 ]
 

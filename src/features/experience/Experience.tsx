@@ -9,7 +9,7 @@ export default function Experience() {
       <Eyebrow color="#7df9c9">// EXPERIENCE.TIMELINE</Eyebrow>
 
       <h2 className="font-display font-extrabold text-cream uppercase tracking-[-0.03em] m-0 mb-14 text-[40px] lg:text-[52px] xl:text-[64px]">
-        4 YEARS, 4 HOMES.
+        4 YEARS · 4 ARCS.
       </h2>
 
       {/* Desktop timeline — 4-col with horizontal line */}

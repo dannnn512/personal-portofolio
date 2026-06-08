@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Status pill */}
       <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-electric text-electric font-mono text-[12px] mb-8 tracking-[0.08em]">
         <span className="w-2 h-2 bg-electric rounded-full flex-shrink-0" />
-        4 YEARS · 15+ SHIPPED · ONE NEW BUILD THIS QUARTER
+        4 YEARS · 15+ SHIPPED
       </div>
 
       {/* Monumental headline */}
@@ -28,7 +28,7 @@ export default function Hero() {
         <p className="font-sans text-[22px] font-medium leading-[1.4] text-cream m-0 max-w-[700px] max-sm:text-lg">
           Founding engineer for founders without a tech team.{' '}
           <span className="text-electric">Web, mobile, backend, infra</span> —
-          three CEOs already trust me with theirs.
+          you name it, I&apos;ll produce.
         </p>
         <div className="flex gap-3 justify-start md:justify-end flex-wrap">
           <Button variant="primary-electric" size="md" href="/hire">

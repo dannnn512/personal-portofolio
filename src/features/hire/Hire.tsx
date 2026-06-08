@@ -60,7 +60,7 @@ export default function Hire() {
           DOWNLOAD CV ↓
         </Button>
         <HandNote rotate={-3} color="#ffd84a" fontSize={26} style={{ marginLeft: 16 }}>
-          ← reply within 24h
+          ← async-first, but I do reply
         </HandNote>
       </div>
     </section>

@@ -10,7 +10,7 @@ export type ExperienceItem = {
 export const EXPERIENCE: ExperienceItem[] = [
   {
     company: 'Core Initiative Studio',
-    role: 'Mobile Dev → Senior',
+    role: 'Frontend → Mobile',
     span: '2022 — 2025 FT · 2025 — 2026 PT',
     dotColor: '#ff5a3c',
     note: 'Where I learned to ship. Started junior. Ended up solo on 12+ products.',
