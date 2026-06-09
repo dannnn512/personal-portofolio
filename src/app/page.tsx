@@ -6,6 +6,7 @@ import Experience from '@/features/experience/Experience'
 import Process from '@/features/process/Process'
 import Now from '@/features/now/Now'
 import Hire from '@/features/hire/Hire'
+import Band from '@/features/band/Band'
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Hire />
       <Now />
       <Archive />
+      <Band />
     </>
   )
 }
