@@ -12,10 +12,10 @@
   --electric: #7df9c9;
   --yellow: #ffd84a;
 
-  --blood: #ff3b2e;
-  --blood-deep: #c01818;
-  --rose: #ff7ab0;
-  --rose-deep: #d65a92;
+  --blood: #c93530;
+  --blood-deep: #8c1f1a;
+  --gold: #f1c232;
+  --gold-deep: #b88b2a;
   --leaf: #6fd39a;
   --rain: #74c4ff;
   --rain-deep: #3b8fe0;
@@ -317,11 +317,11 @@
 .offloud .flyer:focus-visible { transform: rotate(0deg) translateY(-8px) scale(1.015); z-index: 30 !important; }
 
 .offloud .band--blood { left: 0;    top: 64px; width: 57%; --rot: -2deg; z-index: 2; }
-.offloud .band--rose  { right: 0;   top: 0;    width: 44%; --rot: 3deg;  z-index: 3; }
+.offloud .band--gold  { right: 0;   top: 0;    width: 44%; --rot: 3deg;  z-index: 3; }
 .offloud .band--rain  { right: 3%;  top: 432px; width: 40%; --rot: -3deg; z-index: 4; }
 
-.offloud .band--blood .band { min-height: 600px; }
-.offloud .band--rose  .band { min-height: 452px; }
+.offloud .band--blood .band { min-height: 480px; }
+.offloud .band--gold  .band { min-height: 452px; }
 .offloud .band--rain  .band { min-height: 410px; }
 
 .offloud .band {
@@ -350,7 +350,7 @@
 }
 
 .offloud .flourish { position: absolute; z-index: 8; pointer-events: none; filter: drop-shadow(0 3px 7px rgba(0,0,0,0.5)); }
-.offloud .flourish--rose { bottom: -24px; left: -20px; transform: rotate(-12deg); }
+.offloud .flourish--gold { bottom: -24px; left: -20px; transform: rotate(-12deg); }
 
 .offloud .band .media { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
 .offloud .aura-video {
@@ -473,12 +473,12 @@
 }
 .offloud .band--blood:hover .chip { color: color-mix(in srgb, var(--blood) 80%, var(--cream)); border-color: color-mix(in srgb, var(--blood) 45%, transparent); }
 
-.offloud .band--rose { --band-accent: var(--rose); }
-.offloud .band--rose .aura-video { inset: 0; height: 100%; }
-.offloud .band--rose .rm-glow {
-  box-shadow: inset 0 0 clamp(36px, 5vw, 70px) clamp(8px, 1.4vw, 22px) color-mix(in srgb, var(--rose) 42%, transparent);
+.offloud .band--gold { --band-accent: var(--gold); }
+.offloud .band--gold .aura-video { inset: 0; height: 100%; }
+.offloud .band--gold .rm-glow {
+  box-shadow: inset 0 0 clamp(36px, 5vw, 70px) clamp(8px, 1.4vw, 22px) color-mix(in srgb, var(--gold) 42%, transparent);
 }
-.offloud .band--rose .band-name {
+.offloud .band--gold .band-name {
   font-family: var(--font-serif);
   font-weight: 400;
   font-style: italic;
@@ -487,11 +487,11 @@
   font-size: clamp(48px, 5.2vw, 74px);
   line-height: 0.96;
 }
-.offloud .band--rose:hover .band-name {
+.offloud .band--gold:hover .band-name {
   color: #fff;
-  text-shadow: 0 0 16px color-mix(in srgb, var(--rose) 60%, transparent);
+  text-shadow: 0 0 16px color-mix(in srgb, var(--gold) 60%, transparent);
 }
-.offloud .band--rose:hover .chip { color: color-mix(in srgb, var(--rose) 75%, var(--cream)); border-color: color-mix(in srgb, var(--rose) 40%, transparent); }
+.offloud .band--gold:hover .chip { color: color-mix(in srgb, var(--gold) 75%, var(--cream)); border-color: color-mix(in srgb, var(--gold) 40%, transparent); }
 
 .offloud .band--rain { --band-accent: var(--rain); }
 .offloud .band--rain .aura-video { inset: 0; height: 100%; object-position: top center; }
@@ -560,12 +560,12 @@
     transform: rotate(var(--rot-sm, -1.5deg));
   }
   .offloud .band--blood { --rot-sm: -1.5deg; }
-  .offloud .band--rose  { --rot-sm: 2deg; }
+  .offloud .band--gold  { --rot-sm: 2deg; }
   .offloud .band--rain  { --rot-sm: -2deg; }
   .offloud .flyer:hover,
   .offloud .flyer:focus-visible { transform: rotate(0deg) translateY(-5px); }
   .offloud .band--blood .band,
-  .offloud .band--rose .band,
+  .offloud .band--gold .band,
   .offloud .band--rain .band { min-height: 380px; }
 }
 

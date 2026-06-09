@@ -71,16 +71,16 @@ function Tape({ color, width = 120, top = -13, left = '50%', rotate = -6 }: Tape
   )
 }
 
-function RoseFlourish() {
+function GoldFlourish() {
   return (
-    <div className="flourish flourish--rose" aria-hidden="true">
+    <div className="flourish flourish--gold" aria-hidden="true">
       <svg viewBox="0 0 64 64" width={64} height={64}>
-        <g stroke="var(--rose)" strokeWidth={2} fill="none" strokeLinecap="round">
+        <g stroke="var(--gold)" strokeWidth={2} fill="none" strokeLinecap="round">
           <path d="M32 34 C 22 28, 22 14, 32 14 C 42 14, 42 28, 32 34" />
           <path d="M32 34 C 42 24, 56 28, 52 38 C 49 47, 36 44, 32 34" />
           <path d="M32 34 C 36 46, 28 56, 20 50 C 13 45, 20 34, 32 34" />
           <path d="M32 34 C 20 38, 10 30, 16 22 C 21 16, 32 24, 32 34" />
-          <circle cx={32} cy={32} r={4.5} fill="var(--rose-deep)" stroke="none" />
+          <circle cx={32} cy={32} r={4.5} fill="var(--gold-deep)" stroke="none" />
           <path d="M32 38 C 33 48, 33 56, 33 60" stroke="var(--leaf)" />
           <path d="M33 50 C 38 47, 44 49, 45 44" stroke="var(--leaf)" />
         </g>
@@ -89,7 +89,7 @@ function RoseFlourish() {
   )
 }
 
-type BandVariant = 'blood' | 'rose' | 'rain'
+type BandVariant = 'blood' | 'gold' | 'rain'
 
 type Band = {
   idx: string
@@ -110,7 +110,7 @@ const BANDS: Band[] = [
     name: 'Theatre of Blood',
     role: 'the main project · heaviest room',
     tags: ['blackened deathcore', 'technical death metal', 'deathcore'],
-    tagline: 'the heaviest room. the one everything else is measured against.',
+    tagline: 'blackened, technical, relentless. precision under the noise.',
     video: '/media/tob-fire.webm',
     poster: '/media/tob-fire-poster.jpg',
     tapes: [
@@ -120,14 +120,14 @@ const BANDS: Band[] = [
   },
   {
     idx: '02',
-    variant: 'rose',
+    variant: 'gold',
     name: 'Antithesis',
     role: 'side project · theatrical',
     tags: ['visual kei', 'symphonic', 'neoclassical', 'metalcore', 'symphonic metal'],
-    tagline: 'theatrical, gothic-elegant — the soft side of brutality.',
+    tagline: 'theatrical, gothic, ornate. heavy under the velvet.',
     video: '/media/antithesis-petals.webm',
     poster: '/media/antithesis-petals-poster.jpg',
-    tapes: [{ color: 'var(--rose)', width: 118, top: -13, left: '62%', rotate: 5 }],
+    tapes: [{ color: 'var(--gold)', width: 118, top: -13, left: '62%', rotate: 5 }],
   },
   {
     idx: '03',
@@ -135,7 +135,7 @@ const BANDS: Band[] = [
     name: 'Gabriella',
     role: 'side project · melodic',
     tags: ['post-hardcore', 'metalcore', 'melodic'],
-    tagline: 'clean vocals, open sky. the antithesis of the other two.',
+    tagline: 'scream and clean, in the same breath. melodic post-hardcore.',
     video: '/media/gabriella-rain.webm',
     poster: '/media/gabriella-rain-poster.jpg',
     tapes: [{ color: 'var(--electric)', width: 108, top: -12, left: '38%', rotate: -5 }],
@@ -205,7 +205,7 @@ function BandCard({ band }: { band: Band }) {
       {band.tapes.map((tp, i) => (
         <Tape key={i} {...tp} />
       ))}
-      {band.variant === 'rose' && <RoseFlourish />}
+      {band.variant === 'gold' && <GoldFlourish />}
     </div>
   )
 }
