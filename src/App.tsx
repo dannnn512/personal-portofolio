@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Nav from '@/shared/components/Nav'
 import Footer from '@/shared/components/Footer'
+import FloatingBackHome from '@/shared/components/FloatingBackHome'
 import HomePage from '@/app/page'
 import CaseStudyPage from '@/app/work/[slug]/page'
 import HirePage from '@/app/hire/page'
@@ -20,6 +21,8 @@ function ScrollToTop() {
 function Shell() {
   const location = useLocation()
   const isOfflane = location.pathname.startsWith('/offlane')
+  const isOffloud = location.pathname.startsWith('/offloud')
+  const showFloatingBack = isOfflane || isOffloud
 
   return (
     <>
@@ -35,6 +38,7 @@ function Shell() {
         </Routes>
       </main>
       {!isOfflane && <Footer />}
+      {showFloatingBack && <FloatingBackHome />}
     </>
   )
 }
