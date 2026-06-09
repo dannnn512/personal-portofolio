@@ -7,6 +7,7 @@ import CaseStudyPage from '@/app/work/[slug]/page'
 import HirePage from '@/app/hire/page'
 import NotFoundPage from '@/app/not-found/page'
 import OfflanePage from '@/app/offlane/page'
+import OffloudPage from '@/app/offloud/page'
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -19,22 +20,24 @@ function ScrollToTop() {
 
 function Shell() {
   const location = useLocation()
-  const isOfflane = location.pathname.startsWith('/offlane')
+  const ownsChrome =
+    location.pathname.startsWith('/offlane') || location.pathname.startsWith('/offloud')
 
   return (
     <>
       <ScrollToTop />
-      {!isOfflane && <Nav />}
+      {!ownsChrome && <Nav />}
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/work/:slug" element={<CaseStudyPage />} />
           <Route path="/hire" element={<HirePage />} />
           <Route path="/offlane" element={<OfflanePage />} />
+          <Route path="/offloud" element={<OffloudPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
-      {!isOfflane && <Footer />}
+      {!ownsChrome && <Footer />}
     </>
   )
 }
