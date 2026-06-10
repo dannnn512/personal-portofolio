@@ -3,10 +3,12 @@ import AmbientMarks from '@/features/offloud/AmbientMarks'
 import Nav from '@/features/offloud/Nav'
 import Hero from '@/features/offloud/Hero'
 import Manifesto from '@/features/offloud/Manifesto'
-// import Roster from '@/features/offloud/Roster'  // kept for when music ships
+import Roster from '@/features/offloud/Roster'
 import RosterComingSoon from '@/features/offloud/RosterComingSoon'
 import Footer from '@/features/offloud/Footer'
 import './offloud.css'
+
+const SHOW_ROSTER = import.meta.env.VITE_SHOW_ROSTER === 'true'
 
 export default function OffloudPage() {
   return (
@@ -21,7 +23,7 @@ export default function OffloudPage() {
         <div className="rule" />
         <Manifesto />
         <div className="rule" />
-        <RosterComingSoon />
+        {SHOW_ROSTER ? <Roster /> : <RosterComingSoon />}
         <Footer />
       </div>
     </div>
