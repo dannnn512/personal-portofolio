@@ -581,3 +581,43 @@
   .offloud .hero-statusline { white-space: normal; }
   .offloud .nav-links .hide-sm { display: none; }
 }
+
+/* ===========================================================
+   ROSTER — coming-soon placeholder. Replaces the live flyer pile
+   until music ships. Roster.tsx stays in the repo — just not
+   rendered. Swap back in app/offloud/page.tsx when ready.
+   =========================================================== */
+.offloud .cs-title {
+  font-family: var(--font-metal);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  font-size: clamp(42px, 7.5vw, 100px);
+}
+
+.offloud .cs-sub {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.3;
+  color: var(--cream);
+  max-width: 22ch;
+  margin: clamp(24px, 3vw, 48px) 0 0;
+}
+.offloud .cs-sub .cu {
+  position: relative;
+  display: inline;
+  white-space: nowrap;
+}
+.offloud .cs-sub .cu > svg {
+  position: absolute;
+  left: 0;
+  bottom: -0.32em;
+  width: 100%;
+  height: 0.4em;
+  overflow: visible;
+}
+
+.offloud .cs-handnote {
+  margin: clamp(28px, 4vw, 48px) 0 0;
+}
