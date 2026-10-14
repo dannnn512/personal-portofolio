@@ -38,10 +38,10 @@ export const PROJECTS: Project[] = [
     slug: 'brightschools',
     name: 'BRIGHTSCHOOLS',
     company: 'PMM Tech',
-    role: 'Mobile Engineer · Technical Partner',
+    role: 'Mobile + API Engineer · Technical Partner',
     description:
-      'Parent companion app for a school-management platform, used by ~300 students’ families across 2 elementary schools, with a related product running in 5 schools. Built from zero as mobile engineer and technical partner.',
-    tags: ['Flutter'],
+      'School-management platform in three parts: a parent companion mobile app, the API, and a school CMS. I worked on all three, mostly the mobile app and the API. Used by ~300 students’ families across 2 elementary schools, with a related product running in 5 schools. Built from zero as mobile engineer and technical partner.',
+    tags: ['Flutter', 'Go', 'Yii'],
     links: [{ label: 'Live', href: 'https://brightschools.id/' }],
     handNote: 'built from zero',
   },
