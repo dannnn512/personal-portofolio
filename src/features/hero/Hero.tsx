@@ -17,8 +17,11 @@ export default function Hero() {
         <span className="font-display font-extrabold text-cream text-[24px] sm:text-[36px] tracking-[-0.02em] leading-none">
           Ziddan Aryasatya Nugraha
         </span>
-        <span className="font-mono text-[13px] text-muted tracking-[0.18em] max-md:text-[11px] max-md:mt-1.5">
-          PRODUCT ENGINEER<span className="md:hidden"> · INDONESIA · REMOTE</span>
+        <span className="font-mono text-[13px] text-muted tracking-[0.18em] max-md:text-[11px] max-md:tracking-[0.12em] max-md:mt-1.5">
+          <span className="text-electric font-semibold whitespace-nowrap">FORWARD DEPLOYED ENGINEER</span>
+          {' | '}
+          <span className="whitespace-nowrap">PRODUCT ENGINEER</span>
+          <span className="md:hidden block mt-1">INDONESIA · REMOTE</span>
         </span>
       </h1>
 
