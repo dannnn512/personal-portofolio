@@ -1,0 +1,9 @@
+# Cloudflare Pages: serve the SPA shell for client-side routes.
+# A catch-all (`/* /index.html 200`) is rejected as an infinite loop, and `/* / 200`
+# would also swallow /assets, so routes are listed explicitly. Any other unknown path
+# falls back to index.html via Pages' built-in SPA mode (no top-level 404.html) and
+# shows the in-app 404 page.
+/hire       /  200
+/offlane    /  200
+/offloud    /  200
+/work/*     /  200

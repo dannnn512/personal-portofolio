@@ -1,51 +1,92 @@
-import type { FeaturedProject } from './featured.types'
+import type { Project } from './featured.types'
 
-export const FEATURED_PROJECTS: FeaturedProject[] = [
+// First 3 render as featured cards; the rest render in the Archive section.
+// Screenshots load from /public/projects/<slug>.png when the file exists.
+export const PROJECTS: Project[] = [
   {
+    slug: 'debateme',
     name: 'DEBATEME',
-    company: 'Debateme',
-    role: 'Founding Engineer',
+    company: 'DebateMe',
+    role: 'Product Engineer · Sole engineer',
     year: '2026 — Now',
-    pitch:
-      'The founder had the vision and 8 months of failed no-code attempts. No tech team, no plan B. He needed someone to take the whole stack off his hands.',
-    shipped:
-      'I am the tech department. Web, mobile, backend, infra — every layer, solo, founder-direct. Live with real users.',
-    tags: ['Founding Engineer', 'Solo across stack', '0 → 1 with users'],
+    status: 'Live with real users',
+    description:
+      'Debate platform with text, voice, and video debates, AI judging (Gemini), and ELO ranking. Sole engineer, working with a non-technical founder.',
+    tags: ['Go', 'Elixir', 'React', 'Flutter', 'Supabase'],
+    links: [{ label: 'Live', href: 'https://debateme.io' }],
     handNote: 'every layer = me',
-    tapeColor: '#ff5a3c',
-    cardRotation: -1.5,
-    tapeRotation: -6,
   },
   {
-    name: 'TALENTCLOUD.AI',
-    company: 'Pinetop',
-    role: 'Product Engineer',
+    slug: 'talentcloud',
+    name: 'TALENTCLOUD',
+    company: 'TalentCloud Sdn Bhd / Pinetop Technology Venture',
+    role: 'Full-stack Engineer',
     year: '2025 — 2026',
-    pitch:
-      'The client needed attendance that couldn’t be faked and HR rules that fit their reality. The CEO sent me to gather it directly — no PM filter.',
-    shipped:
-      'Admin web + employee self-service + face-verified mobile attendance (AWS Rekognition). I ran the client calls, wrote the BRD, owned mobile end-to-end.',
-    tags: ['Client-facing solo', 'AWS Rekognition', 'BRD → Production'],
-    handNote: 'I met the client myself',
-    tapeColor: '#7df9c9',
-    cardRotation: 0.8,
-    tapeRotation: 4,
-    liveUrl: 'https://talentcloud.ai/',
+    description:
+      'Multi-tenant HRMS used by 20+ companies in Malaysia. I proposed and built face-recognition attendance on AWS Rekognition with liveness detection that blocks photo, video, and screen spoofing, end to end (frontend, backend, database). Published on iOS and Android.',
+    tags: ['React Native', 'Go', 'AWS Rekognition'],
+    links: [
+      {
+        label: 'Play Store',
+        href: 'https://play.google.com/store/apps/details?id=ai.talentcloud.ess.mobile',
+      },
+      { label: 'App Store', href: 'https://apps.apple.com/us/app/talentcloud/id1482887671' },
+    ],
+    handNote: 'proposed it, then built it',
   },
   {
+    slug: 'brightschools',
     name: 'BRIGHTSCHOOLS',
-    company: 'PMM',
-    role: 'Right-hand Engineer',
-    year: '2024',
-    pitch:
-      'Parents wanted a window into school. Teachers wanted a CMS that didn’t get in the way. Built from scratch with my boss — who later brought me in to lead his next company.',
-    shipped:
-      'Three products in one: parent + teacher mobile app, school CMS, and the API. I owned mobile and the API end-to-end. Still running in real schools, plus a sister build (MAS) for Muhammadiyah.',
-    tags: ['Mobile + API end-to-end', 'Three-product suite', 'Live in schools'],
-    handNote: 'trust earned, then deepened',
-    tapeColor: '#ffd84a',
-    cardRotation: -0.5,
-    tapeRotation: -3,
-    liveUrl: 'https://brightschools.id/',
+    company: 'PMM Tech',
+    role: 'Mobile Engineer · Technical Partner',
+    description:
+      'Parent companion app for a school-management platform, used by ~300 students’ families across 2 elementary schools, with a related product running in 5 schools. Built from zero as mobile engineer and technical partner.',
+    tags: ['Flutter'],
+    links: [{ label: 'Live', href: 'https://brightschools.id/' }],
+    handNote: 'built from zero',
+  },
+  {
+    slug: 'emobo',
+    name: 'EMOBO',
+    company: 'Emobo Technology',
+    role: 'Sole Mobile Engineer',
+    year: '2025',
+    description:
+      'On-demand home-service MVP: booking and technician matching. Sole mobile engineer; defined the mobile architecture and API contract.',
+    tags: ['Flutter'],
+    links: [],
+  },
+  {
+    slug: 'mpos',
+    name: 'MPOS',
+    company: 'PMM Tech',
+    role: 'Mobile + Fullstack',
+    year: '2022 — Now',
+    description:
+      'Multi-tenant POS across 18 outlets: cashier, POS, and mobile apps. Developed during the Core Initiative period.',
+    tags: [],
+    links: [],
+  },
+  {
+    slug: 'khk-management-system',
+    name: 'KHK MANAGEMENT SYSTEM',
+    company: 'Pinetop',
+    status: 'Internal · not public',
+    description:
+      'HQ web portal plus an offline-first field app for durian-farm workers to scan tags, syncing when back online.',
+    tags: ['React', 'React Native'],
+    links: [],
+  },
+  {
+    slug: 'fuzevalo',
+    name: 'FUZEVALO',
+    company: 'Client project',
+    description:
+      'Valorant game catalog built end to end for a client: frontend, backend, deployment, and hosting.',
+    tags: ['Next.js'],
+    links: [{ label: 'Live', href: 'https://fuzevalo.com' }],
   },
 ]
+
+export const FEATURED_PROJECTS = PROJECTS.slice(0, 3)
+export const ARCHIVE_PROJECTS = PROJECTS.slice(3)

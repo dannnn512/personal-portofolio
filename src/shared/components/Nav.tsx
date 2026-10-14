@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 
 const NAV_LINKS = [
   { label: 'Built', href: '#built' },
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Archive', href: '#archive' },
   { label: 'Method', href: '#method' },
   { label: 'Now', href: '#now' },

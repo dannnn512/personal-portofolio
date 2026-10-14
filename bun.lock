@@ -9,6 +9,7 @@
         "@fontsource-variable/geist": "^5.2.0",
         "@fontsource/ibm-plex-mono": "^5.1.0",
         "@fontsource/instrument-serif": "^5.2.8",
+        "@fontsource/nosifer": "^5.2.7",
         "@fontsource/patrick-hand": "^5.0.28",
         "clsx": "^2.1.1",
         "react": "^18.3.1",
@@ -121,6 +122,8 @@
     "@fontsource/ibm-plex-mono": ["@fontsource/ibm-plex-mono@5.2.7", "", {}, "sha512-MKAb8qV+CaiMQn2B0dIi1OV3565NYzp3WN5b4oT6LTkk+F0jR6j0ZN+5BKJiIhffDC3rtBULsYZE65+0018z9w=="],
 
     "@fontsource/instrument-serif": ["@fontsource/instrument-serif@5.2.8", "", {}, "sha512-s+bkz+syj2rO00Rmq9g0P+PwuLig33DR1xDR8pTWmovH1pUjwnncrFk++q9mmOex8fUQ7oW80gPpPDaw7V1MMw=="],
+
+    "@fontsource/nosifer": ["@fontsource/nosifer@5.2.7", "", {}, "sha512-Xwc4yMQJx+Q8OV/g2bU1Qk8C37juQ4BLDs6lZabGxVlO3HQvacdwcZsrANAWM107mTzhILH2E9s2tr8EsH0MZw=="],
 
     "@fontsource/patrick-hand": ["@fontsource/patrick-hand@5.2.8", "", {}, "sha512-FZx34VLuiF+Pjv/A/m1bTxjR6hAvmL6vdCp62uypVdgFvSrPrBOxX+vCXVy8lfNVFqvKfm/ghun+aaYVYqfBEg=="],
 

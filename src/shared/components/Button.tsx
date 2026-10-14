@@ -20,7 +20,7 @@ export default function Button({
 
   const variants = {
     'primary-electric': 'bg-electric text-ink hover:bg-[#a0fbd4] border-0',
-    'primary-hot': 'bg-hot text-cream hover:bg-[#ff7a62] border-0',
+    'primary-hot': 'bg-hot-deep text-cream hover:bg-[#a81a00] border-0',
     secondary: 'bg-transparent text-cream border-2 border-cream hover:bg-cream/10',
   }
 
@@ -32,7 +32,9 @@ export default function Button({
   const classes = cn(base, variants[variant], sizes[size], className)
 
   if (href) {
-    const isInternal = href.startsWith('/') && !href.startsWith('//')
+    // Static files (e.g. /cv.pdf) must bypass the router or they hit the 404 route
+    const isInternal =
+      href.startsWith('/') && !href.startsWith('//') && !/\.[a-z0-9]+$/i.test(href)
     if (isInternal) {
       return (
         <Link to={href} className={classes}>

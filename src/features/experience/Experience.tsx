@@ -4,23 +4,24 @@ import { EXPERIENCE } from './experience.data'
 export default function Experience() {
   return (
     <section
+      id="experience"
       className="border-t-2 border-cream bg-bg-alt px-14 py-20 max-sm:px-6 max-sm:py-12"
     >
       <Eyebrow color="#7df9c9">// EXPERIENCE.TIMELINE</Eyebrow>
 
       <h2 className="font-display font-extrabold text-cream uppercase tracking-[-0.03em] m-0 mb-14 text-[40px] lg:text-[52px] xl:text-[64px]">
-        4 YEARS · 4 ARCS.
+        4 YEARS · {EXPERIENCE.length} ARCS.
       </h2>
 
-      {/* Desktop timeline — 4-col with horizontal line */}
-      <div className="hidden lg:block relative">
+      {/* Desktop timeline — one column per entry, horizontal line */}
+      <div className="hidden xl:block relative">
         {/* Timeline line */}
         <div
           className="absolute h-0.5 bg-cream"
           style={{ top: 14, left: 0, right: 0 }}
         />
 
-        <div className="grid grid-cols-4">
+        <div className="grid grid-cols-5">
           {EXPERIENCE.map((item) => (
             <div key={item.company} className="relative pt-9 pr-4">
               {/* Dot */}
@@ -59,7 +60,7 @@ export default function Experience() {
       </div>
 
       {/* Mobile timeline — vertical stack with colored left dots */}
-      <div className="lg:hidden flex flex-col gap-8">
+      <div className="xl:hidden flex flex-col gap-8">
         {EXPERIENCE.map((item) => (
           <div key={item.company} className="flex gap-4 items-start">
             <div

@@ -13,6 +13,7 @@
     "@fontsource-variable/geist": "^5.2.0",
     "@fontsource/ibm-plex-mono": "^5.1.0",
     "@fontsource/instrument-serif": "^5.2.8",
+    "@fontsource/nosifer": "^5.2.7",
     "@fontsource/patrick-hand": "^5.0.28",
     "clsx": "^2.1.1",
     "react": "^18.3.1",

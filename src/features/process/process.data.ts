@@ -18,7 +18,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
   {
     number: '03',
     title: 'I BUILD',
-    body: 'Weekly demos. Real product in your hands every Friday. If it feels off, we change it before it ossifies.',
+    body: 'Weekly demos. A real product in your hands every week. If it feels off, we change it before it\'s too late.',
   },
   {
     number: '04',
