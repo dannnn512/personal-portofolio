@@ -8,15 +8,15 @@ export default function Archive() {
   return (
     <section
       id="archive"
-      className="border-t-2 border-cream px-14 py-[100px] max-sm:px-6 max-sm:py-12"
+      className="border-t-2 border-cream px-14 py-[100px] max-md:px-5 max-md:py-10"
     >
       <Eyebrow color="#ffd84a">// ARCHIVE.INDEX</Eyebrow>
 
       <div className="flex justify-between items-end flex-wrap gap-6">
-        <h2 className="font-display font-extrabold text-cream m-0 uppercase leading-[0.9] tracking-[-0.04em] text-[48px] lg:text-[66px] xl:text-[88px]">
+        <h2 className="font-display font-extrabold text-cream m-0 uppercase leading-[0.9] tracking-[-0.04em] text-[36px] sm:text-[48px] lg:text-[66px] xl:text-[88px]">
           + {ARCHIVE_PROJECTS.length} MORE.
           <br />
-          <span className="text-muted text-[24px] lg:text-[33px] xl:text-[44px]">
+          <span className="text-muted text-[20px] sm:text-[24px] lg:text-[33px] xl:text-[44px]">
             QUICK STORIES.
           </span>
         </h2>
@@ -25,14 +25,14 @@ export default function Archive() {
         </HandNote>
       </div>
 
-      <div className="mt-[60px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-sm:mt-12">
+      <div className="mt-[60px] grid grid-cols-2 xl:grid-cols-4 gap-6 max-md:gap-3 max-md:mt-6">
         {ARCHIVE_PROJECTS.map((project, i) => (
           <ArchiveCard key={project.slug} project={project} index={i} />
         ))}
       </div>
 
       {/* Earlier work — compact list */}
-      <div className="mt-16 max-sm:mt-12">
+      <div className="mt-16 max-md:mt-10">
         <p className="font-mono text-[12px] text-muted tracking-[0.18em] mb-4">EARLIER WORK</p>
         <ul className="list-none p-0 m-0 border-t-2 border-cream">
           {EARLIER_WORK.map((item) => (

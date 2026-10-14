@@ -18,7 +18,7 @@ type ArchiveCardProps = {
 export default function ArchiveCard({ project, index }: ArchiveCardProps) {
   return (
     <article
-      className="bg-paper text-ink px-5 pt-6 pb-5 relative shadow-card-sm"
+      className="bg-paper text-ink px-5 pt-6 pb-5 relative shadow-card-sm max-md:px-3 max-md:pt-5 max-md:pb-3"
       style={{ transform: `rotate(${CARD_ROTATIONS[index % CARD_ROTATIONS.length]}deg)` }}
     >
       <Tape
@@ -31,10 +31,10 @@ export default function ArchiveCard({ project, index }: ArchiveCardProps) {
 
       <ProjectMeta
         project={project}
-        className="font-mono text-[10px] text-ink-dim tracking-[0.18em] mb-2"
+        className="font-mono text-[10px] text-ink-dim tracking-[0.18em] mb-2 max-md:text-[9px] max-md:tracking-[0.1em]"
       />
 
-      <h3 className="font-display font-extrabold text-[22px] leading-none tracking-[-0.02em] m-0">
+      <h3 className="font-display font-extrabold text-[22px] leading-none tracking-[-0.02em] m-0 max-md:text-[17px]">
         {project.name}
       </h3>
 
@@ -46,7 +46,7 @@ export default function ArchiveCard({ project, index }: ArchiveCardProps) {
 
       <ProjectImage project={project} />
 
-      <p className="font-sans text-[13px] leading-[1.5] mt-3.5 mb-0 text-ink">
+      <p className="font-sans text-[13px] leading-[1.5] mt-3.5 mb-0 text-ink max-md:text-[12px] max-md:mt-2.5">
         {project.description}
       </p>
 

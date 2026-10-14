@@ -5,6 +5,7 @@ type HandNoteProps = {
   fontSize?: number
   maxWidth?: number
   style?: React.CSSProperties
+  className?: string
 }
 
 export default function HandNote({
@@ -14,10 +15,11 @@ export default function HandNote({
   fontSize = 22,
   maxWidth,
   style,
+  className = '',
 }: HandNoteProps) {
   return (
     <span
-      className="font-hand inline-block"
+      className={`font-hand inline-block ${className}`}
       style={{
         transform: `rotate(${rotate}deg)`,
         color,

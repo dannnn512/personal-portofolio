@@ -1,25 +1,23 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+// Page order, so the mobile chip rail reads top → bottom
 const NAV_LINKS = [
   { label: 'Built', href: '#built' },
+  { label: 'Archive', href: '#archive' },
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Archive', href: '#archive' },
   { label: 'Method', href: '#method' },
   { label: 'Now', href: '#now' },
 ]
 
 export default function Nav() {
-  const [open, setOpen] = useState(false)
-
   return (
     <header className="sticky top-0 z-50 bg-bg border-b-2 border-cream font-mono">
-      <div className="flex justify-between items-center px-14 py-5 max-sm:px-6">
+      <div className="flex justify-between items-center px-14 py-5 max-md:px-5 max-md:py-3">
         {/* Brand */}
         <Link
           to="/"
-          className="font-display text-[22px] font-extrabold text-cream tracking-[-0.02em] no-underline"
+          className="font-display text-[22px] font-extrabold text-cream tracking-[-0.02em] no-underline max-md:text-[19px]"
         >
           ZIDDAN/<span className="text-hot">WORKSHOP</span>
         </Link>
@@ -27,11 +25,7 @@ export default function Nav() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 text-[12px] tracking-[0.08em] uppercase text-muted">
           {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="hover:text-cream transition-colors"
-            >
+            <a key={link.href} href={link.href} className="hover:text-cream transition-colors">
               {link.label}
             </a>
           ))}
@@ -43,46 +37,30 @@ export default function Nav() {
           </Link>
         </nav>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden flex flex-col gap-[5px] p-2"
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? 'Close menu' : 'Open menu'}
+        {/* Mobile: hire pill stays in the bar */}
+        <Link
+          to="/hire"
+          className="md:hidden bg-electric text-ink px-3 py-3 text-[11px] font-semibold tracking-[0.08em] hover:bg-[#a0fbd4] transition-colors"
         >
-          <span
-            className={`block w-6 h-0.5 bg-cream transition-transform duration-200 ${open ? 'rotate-45 translate-y-[7px]' : ''}`}
-          />
-          <span
-            className={`block w-6 h-0.5 bg-cream transition-opacity duration-200 ${open ? 'opacity-0' : ''}`}
-          />
-          <span
-            className={`block w-6 h-0.5 bg-cream transition-transform duration-200 ${open ? '-rotate-45 -translate-y-[7px]' : ''}`}
-          />
-        </button>
+          WORK WITH ME
+        </Link>
       </div>
 
-      {/* Mobile menu */}
-      {open && (
-        <nav className="md:hidden border-t-2 border-cream px-6 py-6 flex flex-col gap-5 text-[12px] tracking-[0.08em] uppercase text-muted bg-bg">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="hover:text-cream transition-colors"
-              onClick={() => setOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
-          <Link
-            to="/hire"
-            className="bg-electric text-ink px-3 py-1.5 font-bold text-center hover:bg-[#a0fbd4] transition-colors"
-            onClick={() => setOpen(false)}
+      {/* Mobile: swipeable section chips */}
+      <nav
+        aria-label="Sections"
+        className="md:hidden flex gap-1.5 overflow-x-auto no-scrollbar px-5 pb-3 text-[11px] tracking-[0.1em] uppercase"
+      >
+        {NAV_LINKS.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            className="flex-none border-[1.5px] border-ink-dim text-muted px-3 py-2 hover:border-cream hover:text-cream transition-colors"
           >
-            WORK WITH ME
-          </Link>
-        </nav>
-      )}
+            {link.label}
+          </a>
+        ))}
+      </nav>
     </header>
   )
 }

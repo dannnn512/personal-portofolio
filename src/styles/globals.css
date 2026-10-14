@@ -17,6 +17,23 @@
 
 html {
   scroll-behavior: smooth;
+  /* Anchor jumps land below the sticky nav (taller on phones: chip rail) */
+  scroll-padding-top: 80px;
+}
+
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 120px;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @layer base {

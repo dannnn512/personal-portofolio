@@ -16,7 +16,7 @@ export default function FeaturedProjectCard({ project, index }: FeaturedProjectC
 
   return (
     <article
-      className="bg-paper text-ink px-7 pt-8 pb-7 relative shadow-card"
+      className="bg-paper text-ink px-7 pt-8 pb-7 relative shadow-card max-md:flex-none max-md:w-[78vw] max-md:max-w-[320px] max-md:snap-start max-md:px-5 max-md:pt-7 max-md:pb-5"
       style={{ transform: `rotate(${CARD_ROTATIONS[i]}deg)` }}
     >
       <Tape width={120} top={-12} left="50%" rotate={TAPE_ROTATIONS[i]} color={TAPE_COLORS[i]} />
