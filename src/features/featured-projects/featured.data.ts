@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
     year: '2025 — 2026',
     description:
       'Multi-tenant HRMS used by 20+ companies in Malaysia. I proposed and built face-recognition attendance on AWS Rekognition with liveness detection that blocks photo, video, and screen spoofing, end to end (frontend, backend, database). Published on iOS and Android.',
-    tags: ['React Native', 'Go', 'AWS Rekognition'],
+    tags: ['React Native', 'PHP', 'AWS Rekognition'],
     links: [
       {
         label: 'Play Store',
