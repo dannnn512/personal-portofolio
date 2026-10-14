@@ -17,8 +17,8 @@ export default function About() {
 
         <div className="font-sans text-[18px] leading-[1.6] text-cream max-w-[680px] flex flex-col gap-6 max-sm:text-[15px] max-sm:gap-3">
           <p className="m-0">
-            I usually work as the sole or first engineer next to a founder, taking products from
-            idea to launch across web, mobile, and backend.
+            I&apos;m a software engineer who usually works as the sole or first engineer next to a
+            founder, taking products from idea to launch across web, mobile, and backend.
           </p>
           <p className="m-0 text-muted">
             I use AI with structure. Every feature starts with a written spec covering intent and

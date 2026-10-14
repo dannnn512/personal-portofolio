@@ -26,7 +26,7 @@
   <rect class="bg" width="1200" height="630"/>
 
   <rect x="80" y="80" width="14" height="14" class="electric"/>
-  <text x="110" y="94" class="mono cream" font-size="18">ZIDDAN ARYASATYA NUGRAHA · PRODUCT ENGINEER</text>
+  <text x="110" y="94" class="mono cream" font-size="18">ZIDDAN ARYASATYA NUGRAHA · <tspan class="electric">FORWARD DEPLOYED ENGINEER</tspan> · PRODUCT ENGINEER</text>
 
   <text x="80" y="280" class="wordmark cream" font-size="120">ZIDDAN/</text>
   <text x="80" y="410" class="wordmark hot" font-size="120">WORKSHOP</text>

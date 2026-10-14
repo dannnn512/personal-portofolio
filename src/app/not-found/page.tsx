@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Highlight from '@/shared/components/Highlight'
 import HandDrawnCircle from '@/shared/components/HandDrawnCircle'
 import ScribbleArrow from '@/shared/components/ScribbleArrow'
@@ -6,6 +7,15 @@ import Button from '@/shared/components/Button'
 import Eyebrow from '@/shared/components/Eyebrow'
 
 export default function NotFoundPage() {
+  // Unknown paths still return 200 (SPA fallback), so tell crawlers not to index them
+  useEffect(() => {
+    const meta = document.createElement('meta')
+    meta.name = 'robots'
+    meta.content = 'noindex'
+    document.head.appendChild(meta)
+    return () => meta.remove()
+  }, [])
+
   return (
     <section className="relative px-14 pt-20 pb-[100px] max-sm:px-6 max-sm:pt-12 max-sm:pb-12 min-h-[80vh] flex flex-col justify-center">
       <Eyebrow color="#ff5a3c">// 404.NOT.HERE</Eyebrow>
