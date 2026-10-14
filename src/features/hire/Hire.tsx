@@ -10,7 +10,7 @@ export default function Hire() {
     >
       {/* Status pill */}
       <div className="inline-block bg-electric text-ink px-4 py-2 font-mono text-[13px] font-semibold tracking-[0.14em] mb-8">
-        ● WORKSHOP OPEN · Q2–Q3 2026
+        <span aria-hidden>● </span>OPEN TO NEW PRODUCTS &amp; TECHNICAL PARTNERSHIPS
       </div>
 
       {/* Monumental headline */}
@@ -52,9 +52,12 @@ export default function Hire() {
         <Button
           variant="primary-hot"
           size="lg"
-          href="https://wa.me/6285817000448?text=Hi%20Ziddan!%20I%20have%20something%20to%20build."
+          href="https://wa.me/6285817000448"
         >
           MESSAGE ON WHATSAPP →
+        </Button>
+        <Button variant="secondary" size="lg" href="mailto:arya.ziddan7@gmail.com">
+          EMAIL ME
         </Button>
         <Button variant="secondary" size="lg" href="/cv.pdf">
           DOWNLOAD CV ↓

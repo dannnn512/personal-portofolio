@@ -14,6 +14,8 @@ const config: Config = {
         cream: '#f5f1e8',
         muted: '#9a948a',
         hot: '#ff5a3c',
+        // Darkened hot for text/buttons that need 4.5:1 on paper and with cream text
+        'hot-deep': '#c81f00',
         electric: '#7df9c9',
         yellow: '#ffd84a',
       },

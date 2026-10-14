@@ -1,51 +1,56 @@
 import Tape from '@/shared/components/Tape'
-import type { ArchiveProject } from './archive.data'
+import type { Project } from '@/features/featured-projects/featured.types'
+import {
+  ProjectImage,
+  ProjectMeta,
+  ProjectTags,
+} from '@/features/featured-projects/ProjectBits'
+
+const TAPE_COLORS = ['#ff5a3c', '#7df9c9', '#ffd84a']
+const CARD_ROTATIONS = [-1, 1.2, -0.8, 0.6, -1.5]
+const TAPE_ROTATIONS = [-5, 4, -3, 6, -2]
 
 type ArchiveCardProps = {
-  project: ArchiveProject
+  project: Project
+  index: number
 }
 
-export default function ArchiveCard({ project }: ArchiveCardProps) {
+export default function ArchiveCard({ project, index }: ArchiveCardProps) {
   return (
     <article
       className="bg-paper text-ink px-5 pt-6 pb-5 relative shadow-card-sm"
-      style={{ transform: `rotate(${project.cardRotation}deg)` }}
+      style={{ transform: `rotate(${CARD_ROTATIONS[index % CARD_ROTATIONS.length]}deg)` }}
     >
       <Tape
         width={70}
         top={-10}
         left="50%"
-        rotate={project.tapeRotation}
-        color={project.tapeColor}
+        rotate={TAPE_ROTATIONS[index % TAPE_ROTATIONS.length]}
+        color={TAPE_COLORS[index % TAPE_COLORS.length]}
       />
 
-      {/* Meta */}
-      <p className="font-mono text-[10px] text-ink-dim tracking-[0.18em] mb-2">
-        {project.company.toUpperCase()} · {project.year}
-      </p>
+      <ProjectMeta
+        project={project}
+        className="font-mono text-[10px] text-ink-dim tracking-[0.18em] mb-2"
+      />
 
-      {/* Name */}
       <h3 className="font-display font-extrabold text-[22px] leading-none tracking-[-0.02em] m-0">
         {project.name}
       </h3>
 
-      {/* Role */}
-      <p className="font-mono text-[10px] text-ink-dim tracking-[0.1em] mt-1.5 mb-0">
-        {project.role.toUpperCase()}
+      {project.role && (
+        <p className="font-mono text-[10px] text-ink-dim tracking-[0.1em] mt-1.5 mb-0">
+          {project.role.toUpperCase()}
+        </p>
+      )}
+
+      <ProjectImage project={project} />
+
+      <p className="font-sans text-[13px] leading-[1.5] mt-3.5 mb-0 text-ink">
+        {project.description}
       </p>
 
-      {/* Body */}
-      <p className="font-sans text-[13px] leading-[1.5] mt-3.5 mb-3.5 text-ink">
-        {project.body}
-      </p>
-
-      {/* Stack note */}
-      <div
-        className="pt-3 font-hand text-[17px] text-hot"
-        style={{ borderTop: '1.5px dashed #5a504a' }}
-      >
-        {project.stack}
-      </div>
+      <ProjectTags tags={project.tags} />
     </article>
   )
 }

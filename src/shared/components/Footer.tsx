@@ -1,14 +1,13 @@
 const SOCIAL_LINKS = [
   { label: 'EMAIL', href: 'mailto:arya.ziddan7@gmail.com' },
-  { label: 'GH', href: 'https://github.com/', rel: 'noopener noreferrer' },
-  { label: 'LI', href: 'https://linkedin.com/in/', rel: 'noopener noreferrer' },
-  { label: 'X', href: 'https://x.com/', rel: 'noopener noreferrer' },
+  { label: 'GITHUB', href: 'https://github.com/dannnn512', rel: 'noopener noreferrer' },
+  { label: 'LINKEDIN', href: 'https://www.linkedin.com/in/aryaziddan/', rel: 'noopener noreferrer' },
 ]
 
 export default function Footer() {
   return (
     <footer className="border-t-2 border-cream px-14 py-8 flex justify-between items-center flex-wrap gap-4 font-mono text-[12px] text-muted uppercase tracking-[0.12em] max-sm:px-6">
-      <span>ZIDDAN ARYASATYA NUGRAHA · WORKSHOP · 2026</span>
+      <span>ZIDDAN ARYASATYA NUGRAHA · WORKSHOP · {new Date().getFullYear()}</span>
       <div className="flex gap-6">
         {SOCIAL_LINKS.map((link) => (
           <a
