@@ -7,6 +7,7 @@ export type ExperienceItem = {
   note: string
 }
 
+// Oldest start date first (left → right on the desktop timeline).
 export const EXPERIENCE: ExperienceItem[] = [
   {
     company: 'Core Initiative Studio',
@@ -16,10 +17,17 @@ export const EXPERIENCE: ExperienceItem[] = [
     note: 'Started as a frontend web developer, moved to mobile; owned mobile architecture end to end on most projects.',
   },
   {
+    company: 'PMM Tech',
+    role: 'Engineer (part-time)',
+    span: 'JAN 2024 — NOW',
+    dotColor: '#ffd84a',
+    note: 'Built BrightSchools from zero as mobile engineer and technical partner; works on MPOS.',
+  },
+  {
     company: 'Emobo Technology',
     role: 'Mobile Engineer (contract)',
     span: 'SEP — NOV 2025',
-    dotColor: '#ffd84a',
+    dotColor: '#7df9c9',
     note: 'Brought in directly by the CTO as the sole mobile engineer for an on-demand home-service startup. Decided the mobile architecture and defined the API contract; built the MVP booking and technician-matching flow in Flutter.',
   },
   {
@@ -27,15 +35,8 @@ export const EXPERIENCE: ExperienceItem[] = [
     fullName: 'TalentCloud Sdn Bhd / Pinetop Technology Venture',
     role: 'Full-stack Engineer',
     span: 'NOV 2025 — MAY 2026',
-    dotColor: '#7df9c9',
-    note: 'Multi-tenant HRMS used by 20+ companies in Malaysia. Proposed to the CEO and built the move to AWS Rekognition face recognition with liveness detection, end to end. Also built KHK Management System.',
-  },
-  {
-    company: 'PMM Tech',
-    role: 'Engineer (part-time)',
-    span: 'JAN 2024 — NOW',
     dotColor: '#ff5a3c',
-    note: 'Built BrightSchools from zero as mobile engineer and technical partner; works on MPOS.',
+    note: 'Multi-tenant HRMS used by 20+ companies in Malaysia. Proposed to the CEO and built the move to AWS Rekognition face recognition with liveness detection, end to end. Also built KHK Management System.',
   },
   {
     company: 'DebateMe',
