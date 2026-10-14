@@ -7,33 +7,32 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <title>Ziddan Aryasatya Nugraha — Product Engineer</title>
-    <meta
-      name="description"
-      content="I build products end to end (web, mobile, and backend) as the technical partner founders don't have yet. Based in Indonesia, working remotely."
-    />
-    <!-- SITE_URL_META -->
+    <!-- Values come from src/site.ts (filled in by vite.config.ts) -->
+    <title>__SITE_TITLE__</title>
+    <meta name="description" content="__SITE_DESCRIPTION__" />
+    <meta name="author" content="Ziddan Aryasatya Nugraha" />
+    <link rel="canonical" href="__SITE_URL__/" />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Ziddan Aryasatya Nugraha — Product Engineer" />
-    <meta
-      property="og:description"
-      content="I build products end to end (web, mobile, and backend) as the technical partner founders don't have yet."
-    />
-    <meta property="og:image" content="__OG_IMAGE__" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="__SITE_URL__/" />
+    <meta property="og:title" content="__SITE_TITLE__" />
+    <meta property="og:description" content="__SITE_DESCRIPTION__" />
+    <meta property="og:image" content="__SITE_URL__/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ziddan Aryasatya Nugraha — Forward Deployed Engineer and Product Engineer" />
     <meta property="og:site_name" content="Ziddan / Workshop" />
+    <meta property="profile:first_name" content="Ziddan" />
+    <meta property="profile:last_name" content="Aryasatya Nugraha" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ziddan Aryasatya Nugraha — Product Engineer" />
-    <meta
-      name="twitter:description"
-      content="I build products end to end (web, mobile, and backend) as the technical partner founders don't have yet."
-    />
-    <meta name="twitter:image" content="__OG_IMAGE__" />
+    <meta name="twitter:title" content="__SITE_TITLE__" />
+    <meta name="twitter:description" content="__SITE_DESCRIPTION__" />
+    <meta name="twitter:image" content="__SITE_URL__/og.png" />
+
+    <!-- JSON_LD -->
   </head>
   <body>
     <div id="root"></div>

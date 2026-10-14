@@ -8,8 +8,20 @@ import HomePage from '@/app/page'
 import CaseStudyPage from '@/app/work/[slug]/page'
 import HirePage from '@/app/hire/page'
 import NotFoundPage from '@/app/not-found/page'
+import { ROUTES, SITE_NAME, SITE_TITLE, SITE_URL } from '@/site'
 import OfflanePage from '@/app/offlane/page'
 import OffloudPage from '@/app/offloud/page'
+
+// SPA: keep <title> and canonical in step with the route
+function RouteMeta() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    const route = ROUTES.find((r) => r.path === pathname)
+    document.title = route?.title ? `${route.title} · ${SITE_NAME}` : SITE_TITLE
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', `${SITE_URL}${pathname}`)
+  }, [pathname])
+  return null
+}
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -28,6 +40,7 @@ function Shell() {
   return (
     <>
       <ScrollToTop />
+      <RouteMeta />
       {!ownsChrome && <Nav />}
       <main>
         <Routes>
