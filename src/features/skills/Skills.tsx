@@ -2,11 +2,16 @@ import Eyebrow from '@/shared/components/Eyebrow'
 
 const SKILL_GROUPS = [
   { title: 'MOBILE', items: ['React Native', 'Flutter'] },
-  { title: 'WEB', items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'] },
-  { title: 'BACKEND', items: ['Go', 'Elixir', 'PostgreSQL', 'Firebase', 'AWS'] },
+  { title: 'WEB', items: ['React', 'Next.js', 'Vue', 'Nuxt', 'TypeScript', 'Tailwind CSS'] },
+  { title: 'BACKEND', items: ['Go', 'Elixir', 'PHP', 'PostgreSQL', 'Firebase', 'AWS'] },
   {
     title: 'WORKFLOW',
-    items: ['AI-assisted engineering with Claude Code', 'Spec-driven development', 'Code review'],
+    items: [
+      'Translating business needs into technical plans',
+      'AI-assisted engineering with Claude Code',
+      'Spec-driven development',
+      'Code review',
+    ],
   },
 ]
 

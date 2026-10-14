@@ -64,7 +64,7 @@ export const PROJECTS: Project[] = [
     year: '2022 — Now',
     description:
       'Multi-tenant POS across 18 outlets: cashier, POS, and mobile apps. Developed during the Core Initiative period.',
-    tags: [],
+    tags: ['Vue', 'Go'],
     links: [],
   },
   {
