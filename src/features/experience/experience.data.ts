@@ -18,10 +18,10 @@ export const EXPERIENCE: ExperienceItem[] = [
   },
   {
     company: 'PMM Tech',
-    role: 'Engineer (part-time)',
+    role: 'Software Engineer (part-time)',
     span: 'JAN 2024 — NOW',
     dotColor: '#ffd84a',
-    note: 'Built BrightSchools from zero as mobile engineer and technical partner; works on MPOS.',
+    note: 'Work across the stack on every product: specs, API contracts, backend, web, mobile and design. Built BrightSchools, its MAS spin-off and the Langithub app from zero; major contributor to the MPOS suite; designed the architecture and design system for Storehub Warehouse and Berseri Mart.',
   },
   {
     company: 'Emobo Technology',
